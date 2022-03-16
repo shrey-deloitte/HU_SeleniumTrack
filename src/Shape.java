@@ -16,7 +16,7 @@ public class Shape {
     }
 
     public static void main(String[] args) {
-        
+
         System.out.println("The square's area is " +  square(2));
         System.out.println("The rectangle's area is " +  rectangle(2,4));
         System.out.println("The circle's's area is " +  circle(2));
