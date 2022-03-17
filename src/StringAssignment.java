@@ -41,9 +41,9 @@ public class StringAssignment {
         }
 
         if(valid.equals(s3)){
-            System.out.println("Valid Input");
+            System.out.println("Valid Shuffle");
         }else{
-            System.out.println("Invalid Input");
+            System.out.println("Invalid Shuffle");
         }
     }
 }
