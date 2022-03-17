@@ -11,7 +11,7 @@ public class ArrayAssignment {
             {
                 a[i] = scan.nextInt();
             }
-            scan.close();
+         //   scan.close();
             int count=0;
             for(i=0;i<n;i++)
             {
