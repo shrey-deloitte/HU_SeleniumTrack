@@ -1,0 +1,2 @@
+public class StringAssignment {
+}
