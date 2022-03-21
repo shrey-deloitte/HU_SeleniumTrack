@@ -25,20 +25,7 @@ public class Exception_handling_assigment_Password_Validation {
     }
 
 
-    /* public void Password_validation(String password){
-         try{
-             if(password.length()<5||password.length()>10){
-                 System.out.println("invalid password");
-             }
 
-         }
-
-         catch(Exception e){
-             System.out.println("test");
-
-         }
-     }
- */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
