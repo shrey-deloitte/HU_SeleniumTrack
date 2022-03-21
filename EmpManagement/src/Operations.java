@@ -1,7 +1,8 @@
 
 
 import java.util.HashSet;
-import java.util.Iterator;
+import java.util.Scanner;
+
 
 public class Operations {
     HashSet<Employee> empset = new HashSet();
@@ -14,13 +15,41 @@ public class Operations {
         this.empset.add(this.emp2);
         this.empset.add(this.emp3);
     }
+     int id;
+     String name;
+     int age;
+     String companyName;
+     String designation;
+     int salary;
+     String address;
+     int phone;
+
+    boolean found=false;
+
+    Scanner scan=new Scanner(System.in);
 
     public void showData() {
-        Iterator var1 = this.empset.iterator();
-
-        while(var1.hasNext()) {
-            Employee emp = (Employee)var1.next();
+        for (Employee emp:empset){
             System.out.println(emp);
+            System.out.println("\n ");
+        }
+
+    }
+
+    //view emp data
+    public void viewData(){
+
+        System.out.println("Enter the Employee ID");
+        id=scan.nextInt();
+        for(Employee emp:empset){
+            if(emp.getId()==id){
+                System.out.println(emp);
+                found=true;
+            }
+            if(!found) {
+                System.out.println("Invalid ID!");
+            }
+
         }
 
     }

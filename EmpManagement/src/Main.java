@@ -26,6 +26,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("List User Data");
+                    operate.viewData();
                     break;
                 case 3:
                     System.out.println("Update User Data");

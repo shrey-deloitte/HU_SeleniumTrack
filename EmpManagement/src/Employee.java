@@ -75,7 +75,23 @@ public class Employee {
         this.phone = phone;
     }
 
-    public Employee(int id, java.lang.String name, int age, String companyName, String designation, int salary, String address, int phone) {
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", companyName='" + companyName + '\'' +
+                ", designation='" + designation + '\'' +
+                ", salary=" + salary +
+                ", address='" + address + '\'' +
+                ", phone=" + phone +
+                '}';
+    }
+
+
+
+    public Employee(int id, String name, int age, String companyName, String designation, int salary, String address, int phone) {
     super();
     this.id=id;
     this.name=name;
