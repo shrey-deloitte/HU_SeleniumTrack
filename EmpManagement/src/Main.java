@@ -22,7 +22,7 @@ public class Main {
             switch(choice) {
                 case 1:
                     System.out.println("Add User Data");
-                    operate.showData();
+                    operate.addEmp();
                     break;
                 case 2:
                     System.out.println("List User Data");
@@ -30,9 +30,11 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Update User Data");
+                    operate.updateEmp();
                     break;
                 case 4:
                     System.out.println("Delete User Data");
+                    operate.deleteEmp();
                     break;
                 case 5:
                     System.out.println("Thank You");
