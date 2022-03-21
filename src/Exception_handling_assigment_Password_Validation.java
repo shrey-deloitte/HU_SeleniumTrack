@@ -17,7 +17,7 @@ public class Exception_handling_assigment_Password_Validation {
 
         Matcher m = p.matcher(password);
 
-        if (m.matches()) {
+        if (m.matches() && password.length()>5 && password.length()<10) {
             System.out.println("Valid Password");
         } else {
             System.out.println("Invalid Password");
