@@ -7,5 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/AppData/Local/Temp/MicrosoftEdgeDownloads/0e0a7863-a9e8-43d2-8073-61a120fe1061" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/AppData/Local/Temp/MicrosoftEdgeDownloads/0e0a7863-a9e8-43d2-8073-61a120fe1061" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
