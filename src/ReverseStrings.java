@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collection;
+//import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -9,7 +9,9 @@ public class ReverseStrings {
 
         int n= scan.nextInt();
         int i;
+
         ArrayList<String> list = new ArrayList<>();
+
         for(i=0;i<n;i++){
             list.add(scan.next());
         }
