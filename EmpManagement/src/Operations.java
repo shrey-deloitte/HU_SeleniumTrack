@@ -7,23 +7,23 @@ import java.util.Scanner;
 public class Operations {
     HashSet<Employee> empset = new HashSet();
 
-     int id;
-     String name;
-     int age;
-     String companyName;
-     String designation;
-     int salary;
-     String address;
-     String phone;
+    int id;
+    String name;
+    int age;
+    String companyName;
+    String designation;
+    int salary;
+    String address;
+    String phone;
 
-    boolean found=false;
+    boolean found = false;
     static boolean ordering = true;
 
-    Scanner scan=new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
 
     //test
     public void showData() {
-        for (Employee emp:empset){
+        for (Employee emp : empset) {
             System.out.println(emp);
             System.out.println("\n ");
         }
@@ -31,93 +31,92 @@ public class Operations {
     }
 
     //view emp data
-    public void viewData(){
+    public void viewData() {
 
         System.out.println("Enter the Employee ID");
-        id=scan.nextInt();
-        for(Employee emp:empset){
-            if(emp.getId()==id){
+        id = scan.nextInt();
+        for (Employee emp : empset) {
+            if (emp.getId() == id) {
                 System.out.println(emp);
-                found=true;
+                found = true;
             }
 
         }
-        if(!found) {
+        if (!found) {
             System.out.println("Invalid ID!\n");
-        }
-        else {
+        } else {
             System.out.println("employee found");
         }
 
     }
 
-    public void updateEmp(){
+    public void updateEmp() {
         System.out.print("Enter the Employee ID: ");
-        id=scan.nextInt();
-        boolean validAge=false;
-        for(Employee emp:empset){
-            if(emp.getId()==id){
+        id = scan.nextInt();
+        boolean validAge = false;
+
+        for (Employee emp : empset) {
+            if (emp.getId() == id) {
                 System.out.println("Enter details: ");
 
                 System.out.print("Enter Updated Name: ");
-                name=scan.next();
+                name = scan.next();
                 emp.setName(name);
 
 
                 System.out.print("Enter Updated age: ");
-                age=scan.nextInt();
+                age = scan.nextInt();
 
                 //age validation
-                if(age>18 && age<100){
+                if (age > 18 && age < 100) {
 
                     emp.setAge(age);
 
-                }
-                else {
+                } else {
                     System.out.println("Invalid Age");
 
                 }
-
-                System.out.print("Enter Updated Company Name: ");
-                companyName=scan.next();
-                emp.setCompanyName(companyName);
-
-
-                System.out.print("Enter Updated Designation: ");
-                designation=scan.next();
-                emp.setDesignation(designation);
-
-
-                //salary validation
-                System.out.println("Enter Updated salary: ");
-                salary=scan.nextInt();
-                if(salary!=0){
-                    emp.setAge(salary);
-
-                }
-                else {
-                    System.out.println("Invalid Salary");
-                }
-
-
-                System.out.println("Enter Updated address: ");
-                address=scan.next();
-                emp.setAddress(address);
-
-
-                System.out.println("Enter Updated phone: ");
-                phone=scan.next();
-                emp.setPhone(phone);
-
-
-                System.out.println("Updated all the details ");
-
-                System.out.println(emp);
-                found=true;
-
             }
 
+
+            System.out.print("Enter Updated Company Name: ");
+            companyName = scan.next();
+            emp.setCompanyName(companyName);
+
+
+            System.out.print("Enter Updated Designation: ");
+            designation = scan.next();
+            emp.setDesignation(designation);
+
+
+            //salary validation
+            System.out.println("Enter Updated salary: ");
+            salary = scan.nextInt();
+            if (salary != 0) {
+                emp.setAge(salary);
+
+            } else {
+                System.out.println("Invalid Salary");
+            }
+
+
+            System.out.println("Enter Updated address: ");
+            address = scan.next();
+            emp.setAddress(address);
+
+
+            System.out.println("Enter Updated phone: ");
+            phone = scan.next();
+            emp.setPhone(phone);
+
+
+            System.out.println("Updated all the details ");
+
+            System.out.println(emp);
+            found = true;
+
         }
+
         if(!found){
             System.out.println("Employee not present");
         }

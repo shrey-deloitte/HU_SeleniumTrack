@@ -14,26 +14,31 @@ public class HrLogin {
     public void login(){
         System.out.println("Enter Username for Login: ");
         usrname=scan.next();
-
+        if(idp.size()==0){
+            System.out.println("Invalid Username");
+        }
         for (Hr username:idp){
 
-            if(username.getUsername().equals(usrname)){
+            if(username.getUsername().equals(usrname)) {
                 System.out.println("Enter Password: ");
-                password=scan.next();
+                password = scan.next();
 
-                LoginValidation log=new LoginValidation();
+                LoginValidation log = new LoginValidation();
                 log.isAllPresent(password);
-                if(username.getPassword().equals(password)){
-                    found=true;
+                if (username.getPassword().equals(password)) {
+                    found = true;
                     UserDashboard userDashboard = new UserDashboard();
                     userDashboard.dashboard();
                 }
 
 
             }
+
             if(!found){
                 System.out.println("Invalid Username!!");
             }
+
+
         }
 
 
