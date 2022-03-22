@@ -20,17 +20,23 @@ public class HrLogin {
             if(username.getUsername().equals(usrname)){
                 System.out.println("Enter Password: ");
                 password=scan.next();
+
                 LoginValidation log=new LoginValidation();
                 log.isAllPresent(password);
-                found=true;
+                if(username.getPassword().equals(password)){
+                    found=true;
+                    UserDashboard userDashboard = new UserDashboard();
+                    userDashboard.dashboard();
+                }
+
+
             }
             if(!found){
                 System.out.println("Invalid Username!!");
             }
         }
 
-        UserDashboard userDashboard = new UserDashboard();
-        userDashboard.dashboard();
+
 
 
     }
