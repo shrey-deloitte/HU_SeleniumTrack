@@ -22,7 +22,7 @@ public class Operations {
      String designation;
      int salary;
      String address;
-     int phone;
+     String phone;
 
     boolean found=false;
     static boolean ordering = true;
@@ -51,7 +51,10 @@ public class Operations {
 
         }
         if(!found) {
-            System.out.println("Invalid ID!");
+            System.out.println("Invalid ID!\n");
+        }
+        else {
+            System.out.println("employee found");
         }
 
     }
@@ -111,7 +114,7 @@ public class Operations {
               //  System.out.println("Updated! ");
 
                 System.out.println("Enter Updated phone: ");
-                phone=scan.nextInt();
+                phone=scan.next();
                 emp.setPhone(phone);
 
 
@@ -156,30 +159,53 @@ public class Operations {
     }
 
     public void addEmp(){
-        System.out.print("Enter Employee ID: ");
-        id=scan.nextInt();
+        boolean valid=false;
+        id=empset.size()+1;
+        System.out.println(" Employee ID: "+id);
         System.out.println("Enter Employee name: ");
         name= scan.next();
         System.out.println("Enter Employee Age: ");
-        age=scan.nextInt();
+
+        while(!valid){
+            age=scan.nextInt();
+            if(age>18 && age <100){
+                valid=true;
+
+            }
+            else {
+                System.out.println("please enter a valid age: ");
+            }
+        }
         System.out.println("Enter Company Name: ");
         companyName=scan.next();
         System.out.println("Enter employee Designation: ");
         designation= scan.next();
         System.out.println("Enter employee salary");
-        salary= scan.nextInt();
+
+        valid=false;
+        while (!valid){
+            salary= scan.nextInt();
+            if(salary==0){
+                System.out.println("Please enter valid  Salary");
+
+            }
+            else {
+                valid=true;
+
+            }
+        }
+
         System.out.println("Enter employee address: ");
         address=scan.next();
         System.out.println("Enter employee phone no");
-        phone=scan.nextInt();
+        phone=scan.next();
 
         Employee emp=new Employee(id,name,age,companyName,designation,salary,address,phone);
 
         empset.add(emp);
 
         System.out.println(emp);
-        System.out.println("Employeee added successfully! ");
-
+        System.out.println("Employee added successfully! ");
 
     }
 

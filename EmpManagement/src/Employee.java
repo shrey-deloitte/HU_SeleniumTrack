@@ -1,6 +1,4 @@
 
-
-
 public class Employee {
     private int id;
     private String name;
@@ -9,7 +7,7 @@ public class Employee {
     private String designation;
     private int salary;
     private String address;
-    private int phone;
+    private  String phone;
 
     public int getId() {
         return id;
@@ -67,11 +65,11 @@ public class Employee {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -91,7 +89,7 @@ public class Employee {
 
 
 
-    public Employee(int id, String name, int age, String companyName, String designation, int salary, String address, int phone) {
+    public Employee(int id, String name, int age, String companyName, String designation, int salary, String address,  String phone) {
     super();
     this.id=id;
     this.name=name;
@@ -99,6 +97,7 @@ public class Employee {
     this.companyName=companyName;
     this.designation=designation;
     this.salary=salary;
+    this.address=address;
     this.phone=phone;
     }
 }
