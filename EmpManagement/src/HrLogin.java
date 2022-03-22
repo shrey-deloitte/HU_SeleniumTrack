@@ -16,7 +16,7 @@ public class HrLogin {
         usrname=scan.next();
 
         for (Hr username:idp){
-            //System.out.println(username.getUsername());
+
             if(username.getUsername().equals(usrname)){
                 System.out.println("Enter Password: ");
                 password=scan.next();
@@ -77,7 +77,7 @@ public class HrLogin {
         Hr hr=new Hr( usrname, password);
 
         idp.add(hr);
-        System.out.println(idp);
+
         System.out.println("User Credentials Updated! ");
 
 
@@ -96,7 +96,7 @@ public class HrLogin {
 
     public void hrLoginMain(){
 
-       // System.out.println("************** Welcome to User Database **************\n1.Login \n2.Register\n\nEnter your choice: ");
+
 
         int choice;
 

@@ -6,15 +6,7 @@ import java.util.Scanner;
 
 public class Operations {
     HashSet<Employee> empset = new HashSet();
-  //  Employee emp1 = new Employee(101, "aman", 26, "Hashedin", "SDET", 50000, "101 street 1-sec4", 1010101010);
-   // Employee emp2 = new Employee(102, "yash", 28, "Hashedin", "SDET", 50000, "102 street 1-sec4", 313131313);
-   // Employee emp3 = new Employee(103, "rahul", 23, "Hashedin", "SDET", 50000, "103 street 1-sec4", 2121212121);
 
-  /*  public Operations() {
-        this.empset.add(this.emp1);
-        this.empset.add(this.emp2);
-        this.empset.add(this.emp3);
-    }*/
      int id;
      String name;
      int age;
@@ -79,7 +71,7 @@ public class Operations {
                 if(age>18 && age<100){
 
                     emp.setAge(age);
-                  //  System.out.println("Updated! ");
+
                 }
                 else {
                     System.out.println("Invalid Age");
@@ -89,19 +81,19 @@ public class Operations {
                 System.out.print("Enter Updated Company Name: ");
                 companyName=scan.next();
                 emp.setCompanyName(companyName);
-                //System.out.println("Updated! ");
+
 
                 System.out.print("Enter Updated Designation: ");
                 designation=scan.next();
                 emp.setDesignation(designation);
-               // System.out.println("Updated! ");
+
 
                 //salary validation
                 System.out.println("Enter Updated salary: ");
                 salary=scan.nextInt();
                 if(salary!=0){
                     emp.setAge(salary);
-                   // System.out.println("Updated! ");
+
                 }
                 else {
                     System.out.println("Invalid Salary");
@@ -111,7 +103,7 @@ public class Operations {
                 System.out.println("Enter Updated address: ");
                 address=scan.next();
                 emp.setAddress(address);
-              //  System.out.println("Updated! ");
+
 
                 System.out.println("Enter Updated phone: ");
                 phone=scan.next();
@@ -198,7 +190,19 @@ public class Operations {
         System.out.println("Enter employee address: ");
         address=scan.next();
         System.out.println("Enter employee phone no");
-        phone=scan.next();
+
+        valid=false;
+        while (!valid){
+            phone= scan.next();
+            if(phone.length()!=10){
+                System.out.println("Please enter valid  Phone no.");
+
+            }
+            else {
+                valid=true;
+
+            }
+        }
 
         Employee emp=new Employee(id,name,age,companyName,designation,salary,address,phone);
 
