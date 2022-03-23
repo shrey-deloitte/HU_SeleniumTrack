@@ -167,22 +167,22 @@ public class Operations {
                 System.out.println("please enter a valid age: ");
             }
         }
+
         System.out.println("Enter Company Name: ");
         companyName=scan.next();
+
         System.out.println("Enter employee Designation: ");
         designation= scan.next();
-        System.out.println("Enter employee salary");
 
+        System.out.println("Enter employee salary");
         valid=false;
         while (!valid){
             salary= scan.nextInt();
             if(salary==0){
                 System.out.println("Please enter valid  Salary");
-
             }
             else {
                 valid=true;
-
             }
         }
 
@@ -209,9 +209,7 @@ public class Operations {
 
         System.out.println(emp);
         System.out.println("Employee added successfully! ");
-
     }
-
 
 
 }

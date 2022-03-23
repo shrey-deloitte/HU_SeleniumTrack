@@ -113,7 +113,7 @@ public class HrLogin {
 
 
         do{
-            System.out.println("************** Welcome to User Database **************\n1.Login \n2.Register\n3.Exit\n\nEnter your choice: ");
+            System.out.println("************** Welcome to Login Page **************\n1.Login \n2.Register\n3.Exit\n\nEnter your choice: \n");
 
 
             choice=scan.nextInt();

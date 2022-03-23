@@ -27,7 +27,7 @@ public class LoginValidation {
         }
 
 
-            Scanner scan = new Scanner(System.in);
+          //  Scanner scan = new Scanner(System.in);
 
 
 }

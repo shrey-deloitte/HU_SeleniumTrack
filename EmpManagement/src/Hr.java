@@ -27,7 +27,7 @@ public class Hr {
     }
 
     public Hr(String username,String password){
-        super();
+        //super();
         this.password=password;
         this.username=username;
 
