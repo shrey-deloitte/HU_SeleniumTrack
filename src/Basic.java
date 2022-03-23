@@ -20,7 +20,7 @@ public class Basic {
 
         String parentwindow=driver.getWindowHandle();
         String a=driver.getTitle();
-        if(a.equals(title)){
+        if(a.contains(title)){
             System.out.println("PASS");
         }
         else {
@@ -30,7 +30,7 @@ public class Basic {
         driver.findElement(By.xpath("//a[text()='Login']")).click();
         title2= driver.getTitle();
 
-        if(title2.equals(title)){
+        if(title2.contains(title)){
             System.out.println("PASS");
         }
         else {
