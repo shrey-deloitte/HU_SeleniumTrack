@@ -17,6 +17,7 @@ public class HeadlessMode {
 
         String title="PHPTRAVELS";
         String title2;
+        String url;
         driver.manage().window().maximize();
 
         driver.get(" https://phptravels.com/demo");
@@ -49,6 +50,10 @@ public class HeadlessMode {
         driver.switchTo().window(parentwindow);
         System.out.println("Window Switched");
         sleep(2000);
+
+
+        url= driver.getCurrentUrl();
+        System.out.println(url);
 
         driver.findElement(By.xpath("//a[text()='Pricing']")).click();
         System.out.println("Pricing Clicked");

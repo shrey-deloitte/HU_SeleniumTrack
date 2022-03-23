@@ -9,6 +9,8 @@ public class Basic {
     public static void main(String[] args) throws InterruptedException {
         String title="PHPTRAVELS";
         String title2;
+
+        String url;
         System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
 
@@ -39,6 +41,9 @@ public class Basic {
 
         driver.switchTo().window(parentwindow);
         sleep(2000);
+
+        url= driver.getCurrentUrl();
+        System.out.println(url);
 
         driver.findElement(By.xpath("//a[text()='Pricing']")).click();
         sleep(3000);
