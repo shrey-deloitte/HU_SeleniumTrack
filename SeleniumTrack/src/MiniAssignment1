@@ -3,16 +3,6 @@ Problem 1- Open https://www.phptravels.net/hotels  website and locate the follow
 
 
 
-●	PHPTRAVLES Logo
-●	Home
-●	Flights
-●	Tours
-●	Company
-●	Signup Btn
-●	Login Btn
-●	Agents DropDown
-
-
 
 PHPTRAVLES Logo      //header/div[2]/ div[1] /div[1] /div[1]/ div[1]/a[1]/img[1]
 
