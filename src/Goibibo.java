@@ -17,14 +17,15 @@ import static java.lang.Thread.sleep;
 public class Goibibo {
 
 
-       /* public static void takeScreenshot(String fileName) throws IOException, AWTException {
-            BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+        public static void takeScreenshot( WebDriver driver) throws IOException, AWTException {
 
-            ImageIO.write(image, "png", new File("C:\\Users\\shredeshpande\\Pictures\\Screenshorts\\"+fileName+".png"));
 
-        }*/
+            TakesScreenshot ts=(TakesScreenshot) driver;
+            File src=ts.getScreenshotAs(OutputType.FILE);
+            File des=new File(System.getProperty("user.dir")+"/FailedScreenShots/"+"sample.jpg");
+        }
 
-    public static void main(String[] args) throws InterruptedException ,ElementClickInterceptedException{
+    public static void main(String[] args) throws InterruptedException, ElementClickInterceptedException, IOException, AWTException {
        System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         WebElement element;
@@ -74,14 +75,14 @@ public class Goibibo {
             driver.findElement(By.xpath("//span[text() = 'Return']")).click();
             Thread.sleep(1000);
 
-           // driver.findElement(By.cssSelector("span[class*='DayPicker-NavButton DayPicker-NavButton--next']")).click();
-            //Thread.sleep(1000);
+           driver.findElement(By.cssSelector("span[class*='DayPicker-NavButton DayPicker-NavButton--next']")).click();
+            Thread.sleep(1000);
             driver.findElement(By.xpath("//p[text() = '8']")).click();
             System.out.println("Return date  selected");
 
             Thread.sleep(2000);
 
-           // takeScreenshot("flight booking");
+            takeScreenshot(driver);
 
             System.out.println("Take Screenshot ");
 
@@ -100,6 +101,7 @@ public class Goibibo {
             Thread.sleep(2000);
 
             System.out.println("Booked");
+            driver.quit();
 
 
         }
