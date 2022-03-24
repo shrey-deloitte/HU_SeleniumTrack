@@ -24,7 +24,7 @@ public class Goibibo {
 
         }*/
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException ,ElementClickInterceptedException{
        System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         WebElement element;
@@ -65,13 +65,17 @@ public class Goibibo {
             Thread.sleep(1000);
             driver.findElement(By.xpath("//p[text() = '24']")).click();
             System.out.println("Departure date  selected");
-            driver.findElement(By.className("fswTrvl__done")).click();
-            //driver.findElement(By.className("sc-ezbkAF lhIvhC")).click();
-            Thread.sleep(2000);
+          //  driver.findElement(By.className("fswTrvl__done")).click();
+        Thread.sleep(2000);
+            driver.findElement(By.xpath("//span[contains(.,'Done')]")).click();
+            Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[contains(.,'Done')]")).click();
+        Thread.sleep(2000);
             driver.findElement(By.xpath("//span[text() = 'Return']")).click();
             Thread.sleep(1000);
-            driver.findElement(By.cssSelector("span[class*='DayPicker-NavButton DayPicker-NavButton--next']")).click();
-            Thread.sleep(1000);
+
+           // driver.findElement(By.cssSelector("span[class*='DayPicker-NavButton DayPicker-NavButton--next']")).click();
+            //Thread.sleep(1000);
             driver.findElement(By.xpath("//p[text() = '8']")).click();
             System.out.println("Return date  selected");
 
@@ -84,7 +88,6 @@ public class Goibibo {
             driver.findElement(By.xpath("//span[text() = 'Travellers & Class']")).click();
             Thread.sleep(2000);
 
-//
             driver.findElement(By.xpath("//span[text() = 'SEARCH FLIGHTS']")).click();
             System.out.println("Search for flight");
 
