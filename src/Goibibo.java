@@ -1,9 +1,6 @@
 package src;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -26,19 +23,28 @@ public class Goibibo {
 
     }
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
+        WebElement element;
 
         driver.manage().window().maximize();
 
         driver.get("https://www.goibibo.com/");
         driver.findElement(By.xpath("//span[text()='Round-trip']")).click();
         sleep(3000);
-       // driver.findElement(By.className("sc-bkkeKt gAqCbJ fswFld")).click();
+        driver.findElement(By.xpath("//span[text()='From']")).click();
+        element=driver.findElement(By.id("autoSuggest-list"));
+        driver.findElement(By.cssSelector("input[type*='text']")).sendKeys("\n" + "New York, United States \n" + "(NYC)\n");
+        //driver.findElement(By.className("autoCompleteTitle ")).click();
+        element.sendKeys(Keys.DOWN,Keys.RETURN);
+*/
 
-        //dropdown(driver);
-        //driver.findElement(By.className("sc-iJKOTD iipKRx fswWidgetPlaceholder")).cli
-       // returnDropdown(driver);
-        driver.quit();
+
+
+
+        // driver.findElement(By.xpath("//span[text()='To']")).click();
+       // driver.findElement(By.cssSelector("input[type*='text']")).sendKeys("Seattle, United States \n" + "(SEA)\n");
+
+       // driver.quit();
     }
 }
